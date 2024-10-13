@@ -17,6 +17,11 @@ h2 {
     color: rgb(255, 0, 166);
 }
 
+h3 {
+    background-color: blueviolet;
+    color: rgb(255, 0, 166);
+}
 p{
     color:blueviolet;
+    text-decoration-style: dotted;
 }
