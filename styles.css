@@ -53,8 +53,8 @@ p{
 }
 
 .carousel-inner img {
-  width: 80%; /* Esto asegura que la imagen ocupe el 100% del contenedor */
-  max-width: 450px; /* El ancho máximo de las imágenes será 400px */
+  
+  max-width: 500px; /* El ancho máximo de las imágenes será 400px */
   height: auto; /* Mantiene la proporción de la imagen */
   margin: 0 auto; /* Centra las imágenes en el contenedor */
 }
