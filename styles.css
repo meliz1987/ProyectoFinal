@@ -8,8 +8,34 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e7f7",endCo
 }
 
 
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
+
 h1 {
     color: pink;
+    font-family: "Poppins", sans-serif;
 }
 
 h2 {
