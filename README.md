@@ -2,11 +2,11 @@
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en el desarrollo de una tienda en línea especializada en la venta de amigurumis, que son adorables muñecos tejidos a mano. La tienda ofrecerá una variedad de productos, desde muñecos personalizados hasta kits para que los clientes puedan crear sus propios amigurumis.
+Este proyecto consiste en el desarrollo de una tienda en línea especializada en la venta de amigurumis, que son adorables muñecos tejidos a mano. La tienda ofrecerá una variedad de productos, desde personajes icónicos de la cultura pop hasya muñecos personalizados.
 
 ### Objetivos
 - Proporcionar una plataforma fácil de usar para que los amantes de los amigurumis puedan encontrar y comprar sus productos favoritos.
-- Ofrecer información sobre cada producto, incluyendo descripciones, precios y opciones de personalización.
+- Ofrecer información sobre cada producto, incluyendo descripciones, precios y opciones de personalización si aplicara.
 - Crear una experiencia de compra segura y confiable.
 
 ### Funcionalidades
