@@ -57,8 +57,8 @@ p{
   max-width: 500px; /* El ancho máximo de las imágenes será 400px */
   height: auto; /* Mantiene la proporción de la imagen */
   margin: 0 auto; /* Centra las imágenes en el contenedor */
+  border-radius: 6px;
 }
-
 
 
 /*Media Queries*/
