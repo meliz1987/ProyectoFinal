@@ -1,14 +1,15 @@
 
 *{
   margin: 1px;
+ 
 }
 
 body{
-    background: rgb(245,231,247);
-background: -moz-linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
-background: -webkit-linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
-background: linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e7f7",endColorstr="#ffffff",GradientType=1);
+  background: rgb(245,231,247);
+  background: -moz-linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e7f7",endColorstr="#ffffff",GradientType=1);
 }
 
 
@@ -35,7 +36,18 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e7f7",endCo
     font-style: normal;
   }
 
-
+  .banner-img {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  .logo-img {
+    display: block;
+    margin: 5px auto; 
+    padding: 5px; 
+    text-align: center;
+  }
+    
 
 h1 {
     color: pink;
@@ -58,24 +70,26 @@ p{
 
 .carousel-inner img {
   
-  max-width: 500px; /* El ancho máximo de las imágenes será 400px */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin: 0 auto; /* Centra las imágenes en el contenedor */
+  max-width: 500px; 
+  height: auto; 
+  margin: 0 auto; 
   border-radius: 6px;
 }
 
-.logo-img {
-  display: block;
-  margin: 20px auto; /* 20px de margen arriba y abajo, auto a los lados para centrar */
-  padding: 10px; /* Si quieres agregar un pequeño padding alrededor de la imagen */
-  text-align: center;
-}
+
 
 /*Media Queries*/
 /*XX-small devices (vertical phones, 320px and up)*/
 @media (min-width: 320px) {
   .banner-img {
-    max-width: 315px; /* Ancho máximo para pantallas muy pequeñas */
+    max-width: 325px; 
+}
+p {
+  font-size: 14px; 
+  word-wrap: break-word;
+  width: 90%; 
+  padding: 10px; 
+  text-align: justify;
 }
 }
 
@@ -83,42 +97,52 @@ p{
 /*X-small devices (vertical phones, 480px and up)*/
 @media (min-width: 480px) {
   .banner-img {
-    max-width: 550px; /* Ancho máximo para pantallas muy pequeñas */
+    max-width: 550px; 
+}
+p {
+  font-size: 16px;
+  padding: 10px;
+  text-align: justify;
 }
 }
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
   .banner-img {
-    max-width: 680px; /* Ancho ajustado para pantallas pequeñas */
+    max-width: 680px; 
+}
+p {
+  font-size: 18px;
+  padding: 10px;
+  text-align: justify;
 }
 }
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   .banner-img {
-    max-width: 850px; /* Ancho ajustado para tablets */
+    max-width: 850px; 
 }
 }
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   .banner-img {
-    max-width: 1000px; /* Ancho ajustado para pantallas más grandes */
+    max-width: 1000px; 
 }
 }
 
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
   .banner-img {
-    max-width: 1300px; /* Ancho máximo para pantallas grandes */
+    max-width: 1300px; 
 }
 }
 
 /*XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) {
   .banner-img {
-    max-width:1600; /* Mantiene el ancho máximo */
+    max-width:1400; 
 }
 }
 
