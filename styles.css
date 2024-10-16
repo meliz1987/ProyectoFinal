@@ -5,11 +5,15 @@
 }
 
 body{
-	background: rgb(245,231,247);
+	/*background: rgb(245,231,247);
 	background: -moz-linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
 	background: -webkit-linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
 	background: linear-gradient(120deg, rgba(245,231,247,1) 12%, rgba(230,116,247,1) 47%, rgba(255,255,255,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e7f7",endColorstr="#ffffff",GradientType=1);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5e7f7",endColorstr="#ffffff",GradientType=1);*/
+	background-image: url(images/Background.jpeg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -52,21 +56,21 @@ body{
 		
 
 h1 {
-		color: pink;
+		color: #8B51A5;
 		font-family: "Poppins", sans-serif;
 }
 
 h2 {
-		background-color: antiquewhite;
-		color: rgb(255, 0, 166);
+	background-image: linear-gradient(to right top, #bcb5f7, #c1baf5, #c6bff2, #cbc4f0, #cfc9ed, #d3ceed, #d8d4ee, #dcd9ee, #e1dff1, #e7e6f4, #ececf7, #f2f2fa);
+		color: #FFD700;
 }
 
 h3 {
-		background-color: blueviolet;
+	background-image: linear-gradient(to right top, #bcb5f7, #c1baf5, #c6bff2, #cbc4f0, #cfc9ed, #d3ceed, #d8d4ee, #dcd9ee, #e1dff1, #e7e6f4, #ececf7, #f2f2fa);
 		color: rgb(255, 0, 166);
 }
 p{
-		color:blueviolet;
+		color:#4A148C;
 		text-decoration-style: dotted;
 }
 
