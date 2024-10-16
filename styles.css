@@ -37,6 +37,7 @@ body{
 	}
 
 	.banner-img {
+		width:90%;
 		display: block;
 		padding: 10px;
 		text-align: center;
@@ -74,6 +75,27 @@ p{
 	height: auto; 
 	margin: 0 auto; 
 	border-radius: 6px;
+}
+
+.form-container {
+	width: 90%;
+   /*max-width: 1400px;*/ 
+    margin: 0 auto;    
+    padding: 20px;     
+    border-radius: 15px; 
+    border: 1px solid #ccc; 
+	background: rgb(189,180,255);
+	background: linear-gradient(176deg, rgba(189,180,255,1) 0%, rgba(214,208,251,1) 54%); 
+}
+
+.form-container .form-control {
+    width: 100%; 
+}
+
+.btn-light {
+    display: block;
+    width: 100px;
+    margin: 20px auto 0 auto; 
 }
 
 footer {
