@@ -95,7 +95,7 @@ footer p {
 /*XX-small devices (vertical phones, 320px and up)*/
 @media (min-width: 320px) {
 	.banner-img {
-		max-width: 420px; 
+		max-width: 360px; 
 }
 p {
 	font-size: 14px; 
