@@ -142,9 +142,12 @@ footer p {
 	flex-direction: column; 
 	justify-content: center;
 	width: 100%;
+	max-width: 800px;
 	min-height: 100%;
+	margin: 0 auto;
 	padding: 20px;
   }
+
   
   #formContent {
 	-webkit-border-radius: 10px 10px 10px 10px;
@@ -153,12 +156,27 @@ footer p {
 	background: linear-gradient(176deg, #bdb4ff 0%, #d6d0fb 54%);
 	padding: 30px;
 	width: 90%;
-	max-width: 450px;
+	max-width: 500px;
 	position: relative;
 	padding: 0px;
 	-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
 	text-align: center;
+  }
+
+  #formContentRegister {
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	/*background: #fff;*/
+	background: linear-gradient(176deg, #bdb4ff 0%, #d6d0fb 54%);
+	padding: 30px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	padding: 0px;
+	-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+	
   }
   
   #formFooter {
@@ -231,7 +249,7 @@ footer p {
 	display: inline-block;
 	font-size: 16px;
 	margin: 5px;
-	width: 85%;
+	width: 98%;
 	border: 2px solid #f6f6f6;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
