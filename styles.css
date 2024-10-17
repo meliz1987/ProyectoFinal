@@ -137,7 +137,7 @@ p{
 }
 
 .prefooter{
-	background-image: linear-gradient(to left, #b19bb7, #bdabc2, #c9bbcd, #d5cbd8, #e1dbe3);
+	background-image: linear-gradient(to top, #b9adeb, #c4bbea, #cec9e8, #d9d6e6, #e4e4e4);
 	width:100%;
 	margin-top: 3px; 
 }
@@ -146,7 +146,7 @@ p{
 }
 
 footer {
-	background-image: linear-gradient(to left, #b19bb7, #bdabc2, #c9bbcd, #d5cbd8, #e1dbe3);
+	background-color: #b9adeb;
  /* background-color: #bca0c4;*/
   text-align: center !important; 
   /*padding: 20px 0;*/ 
