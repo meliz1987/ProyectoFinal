@@ -111,6 +111,15 @@ p{
     margin: 20px auto 0 auto; 
 }
 
+.prefooter ul {
+    list-style-type: none;
+    padding-left: 0; 
+}
+
+.prefooter li {
+    margin-bottom: 5px; /* pequeño espacio entre los elementos */
+}
+
 footer {
   background-color: #bca0c4;
   text-align: center !important; 

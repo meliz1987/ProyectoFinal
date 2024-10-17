@@ -20,6 +20,9 @@
 	<nav class="navbar navbar-light" style="background-color: #bca0c4;">
 		<div class="container-fluid">
 				<div class="d-flex ms-auto">
+					<a class="navbar-brand" href="#">
+						<img src="/images/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+						</a>
 					<a class="btn btn-outline-primary me-2" href="/login.html">Iniciar Sesión</a>
 					<a class="btn btn-outline-secondary" href="/register.html">Registrarse</a>
 				</div>
@@ -62,96 +65,145 @@
 				<p>En este espacio lleno de creatividad y cariño, encontrarás amigurumis únicos hechos a mano con gran dedicación. Cada pieza es diseñada con amor y atención a cada detalle, ideal para regalar, decorar o coleccionar.</p>
 				<p>Explora nuestras creaciones a través de las fotos y videos que compartimos, y déjate llevar por el encanto de estos pequeños compañeros. ¡Esperamos que encuentres tu próximo amigurumi favorito! </p>
 				<section>
-							 <!-- Video representativo-->
-								<div class="container my-4">
-								<div class="row justify-content-center">
-										<div class="col-12 col-md-8">
-												<div class="ratio ratio-16x9">
-														<video width="400" controls>
-								<source src="videos/video.mp4" type="video/mp4">
-														<!-- Subtítulos -->
-								<track src="videos/subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
-								Tu navegador no soporta la etiqueta de video.
-						</video>
-												</div>
-										</div>
-								</div>
-						</div>
 
-						<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-								<div class="carousel-indicators">
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12" aria-label="Slide 13"></button>
-									<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="13" aria-label="Slide 14"></button>
-								</div>
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="images/ositoCorazon.png" class="d-block w-100" alt="osito corazon">
-									</div>
-									<div class="carousel-item">
-										<img src="images/babyCute.png" class="d-block w-100" alt="gatito new born">
-									</div>
-									<div class="carousel-item">
-										<img src="images/bluecat.jpg" class="d-block w-100" alt="gatito azul">
-									</div>
-									<div class="carousel-item">
-										<img src="images/buho.jpg" class="d-block w-100" alt="buhito">
-									</div>
-									<div class="carousel-item">
-										<img src="images/drplague.png" class="d-block w-100" alt="doctor plaga">
-									</div>
-									<div class="carousel-item">
-										<img src="images/halloweenCute.jpeg" class="d-block w-100" alt="amigos halloween">
-									</div>
-									<div class="carousel-item">
-										<img src="images/leon.jpg" class="d-block w-100" alt="leoncito">
-									</div>
-									<div class="carousel-item">
-										<img src="images/mariposa.webp" class="d-block w-100" alt="mariposa">
-									</div>
-									<div class="carousel-item">
-										<img src="images/mate.webp" class="d-block w-100" alt="matecito">
-									</div>
-									<div class="carousel-item">
-										<img src="images/ositoLanas.webp" class="d-block w-100" alt="osito entre lanas">
-									</div>
-									<div class="carousel-item">
-										<img src="images/shiba.jpg" class="d-block w-100" alt="shiba inu">
-									</div>
-									<div class="carousel-item">
-										<img src="images/thisisfine.jpeg" class="d-block w-100" alt="perrito this is fine">
-									</div>
-									<div class="carousel-item">
-										<img src="images/unicornia.jpg" class="d-block w-100" alt="unicornio coquette">
-									</div>
-
-								</div>
-								<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Anterior</span>
-								</button>
-								<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Siguiente</span>
-								</button>
+		<!-- Video representativo-->
+		<div class="container text-center">
+			<div class="row">
+				<div class="col">
+		<div class="container my-4">
+			<div class="row justify-content-center">
+					<div class="col-12 col-md-8">
+							<div class="ratio ratio-16x9">
+									<video width="400" controls>
+			<source src="videos/video.mp4" type="video/mp4">
+									<!-- Subtítulos -->
+			<track src="videos/subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+			Tu navegador no soporta la etiqueta de video.
+	</video>
 							</div>
+					</div>
+			</div>
+	</div>
+
+ </div>
+			  <div class="col">
+	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 11"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 12"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12" aria-label="Slide 13"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="13" aria-label="Slide 14"></button>
+			</div>
+			<div class="carousel-inner" class="img-thumbnail">
+				<div class="carousel-item active">
+					<img src="images/ositoCorazon.png" class="d-block w-100" alt="osito corazon">
+				</div>
+				<div class="carousel-item">
+					<img src="images/bluecat.jpg" class="d-block w-100" alt="gatito azul">
+				</div>
+				<div class="carousel-item">
+					<img src="images/buho.jpg" class="d-block w-100" alt="buhito">
+				</div>
+				<div class="carousel-item">
+					<img src="images/halloweenCute.jpeg" class="d-block w-100" alt="amigos halloween">
+				</div>
+				<div class="carousel-item">
+					<img src="images/leon.jpg" class="d-block w-100" alt="leoncito">
+				</div>
+				<div class="carousel-item">
+					<img src="images/mariposa.webp" class="d-block w-100" alt="mariposa">
+				</div>
+				
+				<div class="carousel-item">
+					<img src="images/ositoLanas.webp" class="d-block w-100" alt="osito entre lanas">
+				</div>
+				<div class="carousel-item">
+					<img src="images/shiba.jpg" class="d-block w-100" alt="shiba inu">
+				</div>
+				<div class="carousel-item">
+					<img src="images/thisisfine.jpeg" class="d-block w-100" alt="perrito this is fine">
+				</div>
+				<div class="carousel-item">
+					<img src="images/unicornia.jpg" class="d-block w-100" alt="unicornio coquette">
+				</div>
+
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Anterior</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Siguiente</span>
+			</button>
+		</div>			
+			  </div>
+			</div>
+		  </div>
+<!--buscador-->
+							<div class="mb-3">
+								<search>
+										<form method="get" action="/search">
+											<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+											<button class="btn btn-light">Buscar</button>
+											</br>
+										</form>
+									</search>
+								</div> 
 
 
+<div class = "prefooter">								
+<div class="container text-center">
+	<div class="row">
+		<div class="col">
+			<h4>Mapa del Sitio</h4>
+			<ul>
+			<li> <a href="/index.html"> Inicio</a></li>
+			<li> <a href="/about.html">Quiénes Somos</a></li>
+			<li> <a href="/contact.html">Contacto</a></li>
+		</ul>
+		  </div>
+	  <div class="col">
+		<h4>Categorías</h4>
+		<ul>
+		<li> <a href="/animals.html"> Animalitos</a></li>
+		<li> <a href="/popculture.hmtl"> Cultura Pop</a></li>
+		<li> <a href="/babies.html"> Todo bebés</a></li>
+	</ul>
+	  </div>
+	  <div class="col">
+		<h4>Ayuda</h4>
+		<ul>
+		<li> <a href="/comocomprar.html"> ¿Cómo Comprar?</a></li>
+		<li> <a href="/mediospago.hmtl"> Medios de Pago</a></li>
+		<li> <a href="/formaenvios.html"> Formas de envío</a></li>
+	</ul>
+	  </div>
+	  <div class="col">
+		<h4>Datos de contacto</h4>
+		<ul>
+		<li> <a href="/contact.html"> Contacto</a></li>
+		<li> <a href="/contact.hmtl">Showroom</a></li>
+		<li> <a href="/contact.html"> Redes Sociales</a></li>
+	</ul>
+	  </div>
+	  </div>
+	</div>
+  </div>
+</div>
 				
 					 <!-- Bootstrap JS (Incluye Popper.js) -->
 			 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	</body>
 				
 						<!-- Inicializar el carrusel -->
 						<script>
@@ -162,6 +214,9 @@ var carousel = new bootstrap.Carousel(myCarousel)
 				</section>
 				
 		</main>
+
+
+
 		
 		<footer>
 				<!-- Información del pie de página -->
