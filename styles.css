@@ -1,8 +1,38 @@
 
+/*fuente personalizada*/
+.poppins-extralight {
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+.poppins-light {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.poppins-regular {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.poppins-bold {
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+
 *{
 	margin: 3px;
  
 }
+
+a {
+	
+	text-decoration:none !important;
+	}
 
 body{
 	/*background: rgb(245,231,247);
@@ -17,43 +47,9 @@ body{
 }
 
 
-.poppins-extralight {
-		font-family: "Poppins", sans-serif;
-		font-weight: 200;
-		font-style: normal;
-	}
-	
-	.poppins-light {
-		font-family: "Poppins", sans-serif;
-		font-weight: 300;
-		font-style: normal;
-	}
-	
-	.poppins-regular {
-		font-family: "Poppins", sans-serif;
-		font-weight: 400;
-		font-style: normal;
-	}
-	.poppins-bold {
-		font-family: "Poppins", sans-serif;
-		font-weight: 700;
-		font-style: normal;
-	}
 
-	.banner-img {
-		width:90%;
-		display: block;
-		padding: 10px;
-		text-align: center;
-	}
-	.logo-img {
-		display: block;
-		margin: 5px auto; 
-		padding: 5px; 
-		text-align: center;
-		border-radius: 15px;
-	}
-		
+
+	
 
 h1 {
 		color: #8B51A5;
@@ -82,6 +78,22 @@ p{
 		text-decoration-style: dotted;
 }
 
+
+.banner-img {
+	width:90%;
+	display: block;
+	padding: 10px;
+	text-align: center;
+}
+.logo-img {
+	display: block;
+	margin: 5px auto; 
+	padding: 5px; 
+	text-align: center;
+	border-radius: 15px;
+}
+	
+
 .carousel-inner img {
 	
 	max-width: 500px; 
@@ -97,6 +109,7 @@ p{
 	background-color: linear-gradient(176deg, #bdb4ff 0%, #d6d0fb 54%);
   }
 
+ 
 .form-container {
 	width: 90%;
    /*max-width: 1400px;*/ 
@@ -123,22 +136,30 @@ p{
     padding-left: 0; 
 }
 
+.prefooter{
+	background-image: linear-gradient(to left, #b19bb7, #bdabc2, #c9bbcd, #d5cbd8, #e1dbe3);
+	width:100%;
+	margin-top: 3px; 
+}
 .prefooter li {
     margin-bottom: 5px; /* pequeño espacio entre los elementos */
 }
 
 footer {
-  background-color: #bca0c4;
+	background-image: linear-gradient(to left, #b19bb7, #bdabc2, #c9bbcd, #d5cbd8, #e1dbe3);
+ /* background-color: #bca0c4;*/
   text-align: center !important; 
-  padding: 20px 0; 
-  margin-top: 20px; 
+  /*padding: 20px 0;*/ 
+  margin-top: 3px; 
   color: #fff; 
   font-size: 12px; 
+  width:100%;
 }
 
 footer p {
   margin: 0; 
-  font-family: "Poppins", cursive; 
+  font-family: "Poppins", sans-serif;
+  font-size: small; 
 }
 
 
