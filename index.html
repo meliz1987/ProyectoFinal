@@ -17,18 +17,20 @@
 		
 </head>
 <body>  
+	<!--1er navbar-->
 	<nav class="navbar navbar-light" style="background-color: #bca0c4;">
 		<div class="container-fluid">
-				<div class="d-flex ms-auto">
-					<a class="navbar-brand" href="#">
-						<img src="/images/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
-						</a>
-					<a class="btn btn-outline-primary me-2" href="/login.html">Iniciar Sesión</a>
-					<a class="btn btn-outline-secondary" href="/register.html">Registrarse</a>
-				</div>
+		  <!-- Logo en navbar -->
+		  <a class="navbar-brand" href="#">
+			<img src="/images/logo_heart.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+		  </a>  
+		  <!-- Botones de register/login -->
+		  <div class="d-flex ms-auto">
+			<a class="btn btn-outline-primary me-2" href="/login.html">Iniciar Sesión</a>
+			<a class="btn btn-outline-secondary" href="/register.html">Registrarse</a>
+		  </div>
 		</div>
-</nav>
-
+	  </nav>
 
 <header>
 	<img class="banner-img" src="images/logoBanner.png" alt="banner">
@@ -151,15 +153,161 @@
 			</div>
 		  </div>
 <!--buscador-->
-							<div class="mb-3">
-								<search>
-										<form method="get" action="/search">
-											<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-											<button class="btn btn-light">Buscar</button>
-											</br>
-										</form>
-									</search>
-								</div> 
+<div class="container mb-3">
+	<div class="row justify-content-center">
+	  <div class="col-12 col-md-8">
+		<form class="d-flex" method="get" action="/search">
+		  <!-- Caja de búsqueda -->
+		  <input class="form-control me-2" type="search" placeholder="Buscar por producto o categoría" aria-label="Search">
+		  <!-- Botón de búsqueda -->
+		  <button class="btn btn-light" type="submit">Buscar</button>
+		</form>
+	  </div>
+	</div>
+  </div>
+  
+
+	<!-- bloque de 3 productos arriba-->
+	<div class="container text-center">
+		<div class="row align-items-start">
+			<div class="col">
+				
+				<div class="card" style="width: 18rem;">
+					<img src="images/llamamantaapego.png" class="card-img-top" alt="llamita apego">
+					<div class="card-body">
+						<h5 class="card-title">Llama Manta Apego</h5>
+						<p class="card-text">El primer compañero que un bebé puede tener</p>
+						<a href="#" class="btn btn-primary">Agregar como favorito</a>
+						<a href="#" class="btn btn-primary">Agregar al carrito</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+
+				<div class="card" style="width: 18rem;">
+					<img src="images/perroPancho2.jpeg" class="card-img-top" alt="Perro Salchicha">
+					<div class="card-body">
+						<h5 class="card-title">Perro Pancho</h5>
+						<p class="card-text">Adorable perro salchicha, tu futuro compañero de aventuras.</p>
+						<a href="#" class="btn btn-primary">Agregar como favorito</a>
+						<a href="#" class="btn btn-primary">Agregar al carrito</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img src="images/southPark.png" class="card-img-top" alt="South Park">
+					<div class="card-body">
+						<h5 class="card-title">South Park pack x4</h5>
+						<p class="card-text">Estos irreverentes chicos te sacarán más de una sonrisa.</p>
+						<a href="#" class="btn btn-primary">Agregar como favorito</a>
+						<a href="#" class="btn btn-primary">Agregar al carrito</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- bloque de 3 productos en el medio-->
+	<div class="container text-center">
+		<div class="row align-items-center">
+			<div class="col">
+
+				<div class="card" style="width: 18rem;">
+					<img src="images/baphomet.png" class="card-img-top" alt="Cabrita">
+					<div class="card-body">
+						<h5 class="card-title">Cabrita Baphomet</h5>
+						<p class="card-text">Que la magia de esta mística cabrita te acompañe</p>
+						<a href="#" class="btn btn-primary">Agregar como favorito</a>
+						<a href="#" class="btn btn-primary">Agregar al carrito</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				
+				<div class="card" style="width: 18rem;">
+					<img src="images/carpinchos.jpeg" class="card-img-top" alt="Carpinchitos">
+					<div class="card-body">
+						<h5 class="card-title">Pack Carpinchos</h5>
+						<p class="card-text">Porque un carpincho no es suficiente</p>
+						<a href="#" class="btn btn-primary">Agregar como favorito</a>
+						<a href="#" class="btn btn-primary">Agregar al carrito</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="col">
+				
+				<div class="card" style="width: 18rem;">
+					<img src="images/thisisfinedog.jpeg" class="card-img-top" alt="perrito this is fine">
+					<div class="card-body">
+						<h5 class="card-title">Perrito This Is Fine</h5>
+						<p class="card-text">Que no cunda el pánico, este perrito resuelve todo</p>
+						<a href="#" class="btn btn-primary">Agregar como favorito</a>
+						<a href="#" class="btn btn-primary">Agregar al carrito</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+<!-- bloque de 3 productos de abajo-->         
+<div class="container text-center">
+<div class="row align-items-end">
+<div class="col">
+
+<div class="card" style="width: 18rem;">
+<img src="images/zarigueya.jpeg" class="card-img-top" alt="zarigueya">
+<div class="card-body">
+	<h5 class="card-title">Zarigüeya</h5>
+	<p class="card-text">A la grande le puse Cuca</p>
+	<a href="#" class="btn btn-primary">Agregar como favorito</a>
+	<a href="#" class="btn btn-primary">Agregar al carrito</a>
+</div>
+</div>
+
+</div>
+<div class="col">
+
+<div class="card" style="width: 18rem;">
+<img src="images/Chems1.jpeg" class="card-img-top" alt="Chems">
+<div class="card-body">
+	<h5 class="card-title">Chems</h5>
+	<p class="card-text">Que no te de amsiedadt, este Chems puede ser tuyo</p>
+	<a href="#" class="btn btn-primary">Agregar como favorito</a>
+	<a href="#" class="btn btn-primary">Agregar al carrito</a>
+</div>
+</div>
+
+</div>
+<div class="col">
+
+<div class="card" style="width: 18rem;">
+<img src="images/gatito_fantasma.png" class="card-img-top" alt="Gatito Fantasma">
+<div class="card-body">
+	<h5 class="card-title">Gatito Fantasma</h5>
+	<p class="card-text">Todo es mejor con gatitos, inclusive los sustos</p>
+	<a href="#" class="btn btn-primary">Agregar como favorito</a>
+	<a href="#" class="btn btn-primary">Agregar al carrito</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+</ul>
+</nav>
 
 
 <div class = "prefooter">								

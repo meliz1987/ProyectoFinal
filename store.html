@@ -20,12 +20,17 @@
 <body>  
 	<nav class="navbar navbar-light" style="background-color: #bca0c4;">
 		<div class="container-fluid">
-				<div class="d-flex ms-auto">
-					<a class="btn btn-outline-primary me-2" href="/login.html">Iniciar Sesión</a>
-					<a class="btn btn-outline-secondary" href="/register.html">Registrarse</a>
-				</div>
+		  <!-- Logo en navbar -->
+		  <a class="navbar-brand" href="#">
+			<img src="/images/logo_heart.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+		  </a>  
+		  <!-- Botones de register/login -->
+		  <div class="d-flex ms-auto">
+			<a class="btn btn-outline-primary me-2" href="/login.html">Iniciar Sesión</a>
+			<a class="btn btn-outline-secondary" href="/register.html">Registrarse</a>
+		  </div>
 		</div>
-</nav>
+	  </nav>
 		
 	 
 <header>
@@ -60,15 +65,19 @@
 		
 		
 		<main>  
-			<div class="mb-3">
-				<search>
-						<form method="get" action="/search">
-							<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-							<button class="btn btn-light">Buscar</button>
-							</br>
-						</form>
-					</search>
-				</div>      
+			<!--Buscador-->
+			<div class="container mb-3">
+				<div class="row justify-content-center">
+				  <div class="col-12 col-md-8">
+					<form class="d-flex" method="get" action="/search">
+					  <!-- Caja de búsqueda -->
+					  <input class="form-control me-2" type="search" placeholder="Buscar por producto o categoría" aria-label="Search">
+					  <!-- Botón de búsqueda -->
+					  <button class="btn btn-light" type="submit">Buscar</button>
+					</form>
+				  </div>
+				</div>
+			  </div>     
 				 
 				 
 				<section>
