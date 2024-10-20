@@ -163,6 +163,57 @@ footer p {
 }
 
 
+/*estilo de cajas de productos*/
+/* Estilos del contenedor principal */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Para hacer que los productos se ajusten según el tamaño de la pantalla */
+    justify-content: space-around;
+    gap: 20px; /* Espacio entre los productos */
+}
+
+/* Estilos de los productos individuales */
+.product {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto;
+    width: 300px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product h5 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    color: #6c757d;
+}
+
+.product button {
+    background-color: #4c064e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #704272;
+}
+
+
 /*login*/
 .wrapper {
 	display: flex;
