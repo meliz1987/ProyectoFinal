@@ -175,16 +175,14 @@ footer p {
 /* icono fav */
 .heart-icon {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    top: 3px;
+    left: 45%;
+    width:20px;
+	height: 20px;
     color: #ff4b5c;
     cursor: pointer;
 }
 
-.heart-icon:hover {
-    color: #ff1e3d;
-}
 
 /* Estilos de los productos individuales */
 .product {
@@ -196,6 +194,7 @@ footer p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+	position: relative;
 }
 
 .product img {
