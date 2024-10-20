@@ -140,9 +140,40 @@ p{
 	background-image: linear-gradient(to top, #b9adeb, #c4bbea, #cec9e8, #d9d6e6, #e4e4e4);
 	width:100%;
 	margin-top: 3px; 
+	padding: 20px 0;
 }
 .prefooter li {
-    margin-bottom: 5px; /* pequeño espacio entre los elementos */
+    margin-bottom: 5px; 
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+
+.col {
+    flex: 1; 
+    min-width: 200px; 
+    margin: 10px; 
+}
+
+h4 {
+    margin-bottom: 10px; 
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+ul li {
+    margin: 5px 0; 
 }
 
 footer {
