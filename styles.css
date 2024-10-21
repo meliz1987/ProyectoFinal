@@ -196,6 +196,13 @@ footer p {
 
 /*estilo de cajas de productos*/
 /* Estilos del contenedor principal */
+
+.product-link {
+    display: block;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Mantiene los colores de los textos originales */
+}
+
 .product-container {
     display: flex;
     flex-wrap: wrap; 
@@ -251,12 +258,17 @@ footer p {
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
+	pointer-events: all;
 }
 
 .product button:hover {
     background-color: #704272;
+
 }
 
+.product:hover {
+    box-shadow: 0 4px 8px #07010833; /*sombrerado al pasar el cursor */
+}
 
 /*login*/
 .wrapper {
