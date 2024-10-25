@@ -198,6 +198,13 @@ footer p {
 
 /*estilo de cajas de productos*/
 /* Estilos del contenedor principal */
+.product-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    gap: 10px;
+	padding: 10px;
+}
 
 .product-link {
     display: block;
@@ -205,12 +212,7 @@ footer p {
     color: inherit; /* Mantiene los colores de los textos originales */
 }
 
-.product-container {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-around;
-    gap: 20px;
-}
+
 
 /* icono fav */
 .heart-icon {
@@ -226,15 +228,21 @@ footer p {
 
 /* Estilos de los productos individuales */
 .product {
-    display: grid;
+    /*display: grid;*/
+	display: flex;
+	flex-direction: column;
     grid-template-rows: auto 1fr auto auto;
-    width: 300px;
-    padding: 15px;
+    /*width: 300px;*/
+	width: calc(25% - 40px);
+    padding: 10px;
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 	position: relative;
+    box-shadow: 0 4px 8px #0000001a;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
@@ -252,25 +260,92 @@ footer p {
     color: #6c757d;
 }
 
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ad0654; 
+}
+
+.fees {
+    font-size: 0.8rem;
+    color: #6d5252; 
+}
 .product button {
     background-color: #4c064e;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
 	pointer-events: all;
+	transition: background-color 0.3s ease;
 }
 
 .product button:hover {
     background-color: #704272;
+	box-shadow: 0 8px 16px #0e0a0ab0;
 
 }
 
 .product:hover {
     box-shadow: 0 4px 8px #07010833; /*sombrerado al pasar el cursor */
+	transform: scale(1.0);
+	transition: transform 0.2s ease-in-out;
 }
+
+.buttons-card {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+}
+
+.buttons-card button {
+    flex: 1; /* Hace que ambos botones ocupen el mismo ancho */
+    padding: 10px;
+}
+
+
+
+/*sección reseñas*/
+
+.reviews-section {
+	padding: 50px 20px;
+	background-color: #f9f9f9; 
+	text-align: center;
+  }
+  
+  .reviews-section h2 {
+	font-size: 2rem;
+	margin-bottom: 30px;
+	color: #333;
+  }
+  
+  .reviews-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+	gap: 20px;
+  }
+  
+  .review {
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .review:hover {
+	transform: scale(1.05); 
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .review p {
+	font-size: 1rem;
+	color: #555;
+  }
+  
+
 
 /*login*/
 .wrapper {
@@ -336,7 +411,7 @@ footer p {
   
   h2.active {
 	color: #0d0d0d;
-	border-bottom: 2px solid #5fbae9;
+	border-bottom: 2px solid #d95fe9;
   }
   
   
@@ -535,6 +610,11 @@ p {
 	padding: 10px; 
 	text-align: justify;
 }
+
+.product {
+	width: calc(100% - 20px); 
+	margin: 10px auto;
+}
 }
 
 
@@ -548,6 +628,11 @@ p {
 	padding: 10px;
 	text-align: justify;
 }
+
+.product {
+	width: calc(100% - 40px); 
+}
+
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -565,6 +650,9 @@ p {
 	max-width: 100%;
 	margin-bottom: 20px;
 }
+.product {
+	width: calc(50% - 20px); /* Dos columnas */
+}
 
 }
 
@@ -572,6 +660,9 @@ p {
 @media (min-width: 768px) {
 	.banner-img {
 		max-width: 950px; 
+}
+.product {
+	width: calc(50% - 40px); 
 }
 }
 
