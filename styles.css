@@ -133,20 +133,53 @@ p{
     margin: 20px auto 0 auto; 
 }
 
-.prefooter ul {
+.sitemap ul {
     list-style-type: none;
     padding-left: 0; 
 }
 
-.prefooter{
+.sitemap{
 	background-image: linear-gradient(to top, #b9adeb, #c4bbea, #cec9e8, #d9d6e6, #e4e4e4);
 	width:100%;
 	margin-top: 3px; 
 	padding: 20px 0;
 }
-.prefooter li {
+.sitemap li {
     margin-bottom: 5px; 
 }
+
+.sitemap .col ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-bottom: 5px; 
+}
+
+
+.sitemap h4 {
+    color:#3e1969; 
+}
+
+
+.payment-method {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    padding: 0;
+    list-style: none; 
+    justify-content: center; 
+}
+
+.payment-method li {
+    display: flex;
+}
+
+.payment-method img {
+    width: 32px; /* Tamaño base de los íconos */
+    height: 32px;
+}
+
+
 
 .container {
     max-width: 1200px; 
@@ -208,11 +241,19 @@ footer p {
 
 .product-link {
     display: block;
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Mantiene los colores de los textos originales */
+    text-decoration: none; 
+    color: inherit; 
 }
 
 
+/*iconos*/
+
+/* icono billete */
+.cash-icon {
+    width: 36px;
+    height: 36px;
+    fill: #4c3b8d;
+}
 
 /* icono fav */
 .heart-icon {
@@ -226,7 +267,8 @@ footer p {
 }
 
 
-/* Estilos de los productos individuales */
+
+/* Estilos de las tarjetas de los productos*/
 .product {
     /*display: grid;*/
 	display: flex;
