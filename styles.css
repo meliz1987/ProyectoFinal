@@ -87,6 +87,41 @@ p{
 	text-align: center;
 	border-radius: 15px;
 }
+
+
+.banner-landing{
+	background-image: linear-gradient(to bottom, #b9adeb, #c4bbea, #cec9e8, #d9d6e6, #e4e4e4);
+	margin: 0; 
+    padding: 0;
+}
+
+.banner-sales{
+height:110px;
+/* global 94%+ browsers support */
+background: linear-gradient(271deg, #B9ADEB 14%, #7768B5 76%);
+display: flex;
+align-items: center; 
+justify-content: center; 
+margin: 0; 
+padding: 0;
+
+}
+
+.container-fluid {
+	padding: 0 10px; 
+  }
+  
+  .d-flex.ms-auto {
+	justify-content: flex-end; 
+  }
+
+.banner-sales a{
+	color:#0d0d0d !important;
+	font-size: medium;
+	font-weight: 500;
+	text-decoration: none;
+	}
+
 .logo-img {
 	display: block;
 	margin: 5px auto; 
@@ -94,7 +129,8 @@ p{
 	text-align: center;
 	border-radius: 15px;
 }
-	
+
+
 
 .carousel-inner img {
 	
@@ -156,8 +192,9 @@ p{
 }
 
 
-.sitemap h4 {
+.sitemap h6 {
     color:#3e1969; 
+	text-align: justify;
 }
 
 
@@ -220,6 +257,7 @@ footer {
   color: #fff; 
   font-size: 12px; 
   width:100%;
+  text-align: justify;
 }
 
 footer p {
