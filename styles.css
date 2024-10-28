@@ -187,8 +187,8 @@ padding: 0;
 .sitemap .col ul li {
     display: flex;
     align-items: center;
-    gap: 8px; 
-    margin-bottom: 5px; 
+    gap: 5px; 
+    margin: auto; 
 }
 
 
@@ -196,6 +196,12 @@ padding: 0;
     color:#3e1969; 
 	text-align: justify;
 }
+
+.sitemap a {
+	font-weight:300;
+	color: #0c479f;
+	
+	}
 
 
 .payment-method {
@@ -263,7 +269,7 @@ footer {
 footer p {
   margin: 0; 
   font-family: "Poppins", sans-serif;
-  font-size: small; 
+  font-size:xx-small; 
 }
 
 
