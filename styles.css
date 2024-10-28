@@ -793,13 +793,8 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 22%;
-	/* global 92%+ browsers support */
-	/*background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);*/
-	padding: 1px;
-	border-radius: 50px;
-	text-decoration: none; 
-	font-size:26px;
+	right: 23%;
+	font-size:27px;
   
   }
 }
@@ -826,13 +821,8 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 25%;
-	/* global 92%+ browsers support */
-	/*background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);*/
-	padding: 1px;
-	border-radius: 50px;
-	text-decoration: none; 
-	font-size:27px;
+	right: 22%;
+	font-size:26px;
   
   }
 
