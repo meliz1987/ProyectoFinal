@@ -34,10 +34,11 @@
 	bottom: 20px;
 	right: 20px;
 	/* global 92%+ browsers support */
-	background: radial-gradient(circle at 50% 50%, #AD81FA 32%, #C8B1EE 63%, #E6E0FF 87%);
-	padding: 5px 15px;
+	background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);
+	padding: 15px;
 	border-radius: 50px;
 	text-decoration: none; 
+	font-size:30px;
   
   }
 
