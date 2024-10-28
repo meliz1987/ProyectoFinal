@@ -29,6 +29,19 @@
  
 }
 
+#back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	/* global 92%+ browsers support */
+	background: radial-gradient(circle at 50% 50%, #AD81FA 32%, #C8B1EE 63%, #E6E0FF 87%);
+	padding: 5px 15px;
+	border-radius: 50px;
+	text-decoration: none; 
+  
+  }
+
+
 a {
 	
 	text-decoration:none !important;
