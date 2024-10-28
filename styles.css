@@ -847,6 +847,14 @@ p {
 	width: calc(50% - 20px); /* Dos columnas */
 }
 
+#back-to-top-full {
+	position: fixed;
+	bottom: 2%;
+	right: 10%;
+	font-size:26px;
+  
+  }
+
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -857,6 +865,14 @@ p {
 .product {
 	width: calc(50% - 40px); 
 }
+
+#back-to-top-full {
+	position: fixed;
+	bottom: 2%;
+	right: 3%;
+	font-size:26px;
+  
+  }
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -864,6 +880,14 @@ p {
 	.banner-img {
 		max-width: 1000px; 
 }
+
+#back-to-top-full {
+	position: fixed;
+	bottom: 2%;
+	right: 3%;
+	font-size:26px;
+  
+  }
 }
 
 /*X-Large devices (large desktops, 1200px and up)*/
@@ -871,6 +895,14 @@ p {
 	.banner-img {
 		max-width: 1300px; 
 }
+
+#back-to-top-full {
+	position: fixed;
+	bottom: 2%;
+	right: 3%;
+	font-size:26px;
+  
+  }
 }
 
 /*XX-Large devices (larger desktops, 1400px and up)*/
@@ -878,5 +910,13 @@ p {
 	.banner-img {
 		max-width:1765; 
 }
+
+#back-to-top-full {
+	position: fixed;
+	bottom: 2%;
+	right: 3%;
+	font-size:26px;
+  
+  }
 }
 
