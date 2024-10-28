@@ -47,7 +47,7 @@
   #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 2%;
+	/*right: 2%;*/
 	/* global 92%+ browsers support */
 	/*background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);*/
 	padding: 1px;
@@ -869,7 +869,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 3%;
+	right: 0%;
 	font-size:26px;
   
   }
@@ -884,7 +884,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 3%;
+	right: 0%;
 	font-size:26px;
   
   }
@@ -899,7 +899,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 3%;
+	right: 0%;
 	font-size:26px;
   
   }
@@ -914,7 +914,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 3%;
+	right: 0%;
 	font-size:26px;
   
   }
