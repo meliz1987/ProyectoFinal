@@ -35,7 +35,7 @@
 	bottom: 2%;
 	/*right: 2%;*/
 	/* global 92%+ browsers support */
-	background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);
+	/*background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);*/
 	padding: 1px;
 	border-radius: 50px;
 	text-decoration: none; 
@@ -755,7 +755,10 @@ footer p {
 /*XX-small devices (vertical phones, 320px and up)*/
 @media (min-width: 320px) {
 	.banner-img {
-		max-width: 360px; 
+		/*max-width: 360px;*/ 
+		width: 90%;
+		padding: 2%;
+		margin:  5%;
 }
 p {
 	font-size: 14px; 
@@ -775,7 +778,9 @@ p {
 /*X-small devices (vertical phones, 480px and up)*/
 @media (min-width: 480px) {
 	.banner-img {
-		max-width: 550px; 
+		width: 90%;
+		padding: 2%;
+		margin:  4%;
 }
 p {
 	font-size: 16px;
