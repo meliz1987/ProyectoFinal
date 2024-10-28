@@ -345,6 +345,8 @@ footer p {
 	display: block; 
 	width: 100%;
 	text-align: center;
+	font-size:larger;
+	font-weight: bold;
   }
   /* Definición de la animación de texto */
   @keyframes fade {
