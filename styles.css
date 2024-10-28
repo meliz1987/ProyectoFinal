@@ -33,13 +33,13 @@
 #back-to-top {
 	position: fixed;
 	bottom: 2%;
-	right: 2%;
+	/*right: 2%;*/
 	/* global 92%+ browsers support */
 	background: radial-gradient(circle at 50% 50%, #E999FF 0%, #AD81FA 100%);
-	padding: 12px;
+	padding: 1px;
 	border-radius: 50px;
 	text-decoration: none; 
-	font-size:30px;
+	font-size:25px;
   
   }
 
