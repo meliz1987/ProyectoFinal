@@ -33,7 +33,7 @@
 html, body {
 	overflow-x: hidden;
   }
-  
+
 #back-to-top {
 	position: fixed;
 	bottom: 2%;
@@ -797,7 +797,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 23%;
+	right: 1%;
 	font-size:27px;
   
   }
@@ -825,7 +825,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 22%;
+	right: 3%;
 	font-size:26px;
   
   }
@@ -854,7 +854,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 10%;
+	right: 7%;
 	font-size:26px;
   
   }
