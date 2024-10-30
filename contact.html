@@ -93,7 +93,7 @@
 		<p>Completá el siguiente formulario y te responderemos lo antes posible.</p>
 
 
-<div class="form-container">
+<!--<div class="form-container"> //formulario con bs
 		<form action="https://formspree.io/f/xeoqjpgo" method="POST">
 				<div class="mb-3">
 					<label for="exampleFormControlInput1" class="form-label">Nombre</label>
@@ -113,7 +113,8 @@
 				  </div>
 				<button type="submit" class="btn btn-light">Enviar</button>
 		</form>
-</div>
+</div>--> 
+
 
 
 
@@ -132,6 +133,31 @@
 				<button type="submit">Send</button>
 		
 			</form>-->
+
+
+			<div class="form-container">
+				<form action="https://formspree.io/f/xeoqjpgo" method="POST">
+				  <div class="form-group">
+					<label for="name">Nombre</label>
+					<input type="text" id="name" name="name" placeholder="Tu nombre">
+				  </div>
+				  <div class="form-group">
+					<label for="email">Dirección de correo electrónico</label>
+					<input type="email" id="email" name="email" placeholder="tucorreo@dominio.com">
+				  </div>
+				  <div class="form-group">
+					<label for="message">Tu mensaje:</label>
+					<textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+				  </div>
+				  <div class="form-check">
+					<input type="checkbox" id="privacy" name="privacy">
+					<label for="privacy">He leído y acepto la Política de Privacidad.</label>
+				  </div>
+				  <button type="submit" class="send-btn">Enviar</button>
+				</form>
+			  </div>
+
+			  
 		</br>
 
 		<h3>Visitanos en nuestra tienda</h3>
