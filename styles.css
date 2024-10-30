@@ -415,6 +415,31 @@ footer p {
 }
 
 
+
+/*estilo caja de busqueda*/
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px; 
+}
+
+.search-input {
+    flex: 1; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; 
+    box-sizing: border-box;
+}
+
+    
+
 /*estilo de cajas de productos*/
 /* Estilos del contenedor principal */
 .product-container {
@@ -810,7 +835,18 @@ p {
     font-size: 14px;
   }
 
+  .search-form {
+	flex-direction: column;
 }
+.search-input, .send-btn {
+	width: 100%;
+	border-radius: 5px;
+}
+.send-btn {
+	margin-top: 10px;
+}
+}
+
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
