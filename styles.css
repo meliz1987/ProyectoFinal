@@ -61,9 +61,40 @@ body{
 }
 
 
-
-
-	
+/*navbar*/
+/* Estilos básicos de navegación */
+nav {
+	background: linear-gradient(357deg, #9C73CA 0%, #EEB2FF 100%);
+	padding: 10px 0;
+  }
+  
+  .navbar-main{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .nav li {
+	margin: 0 15px;
+  }
+  
+  .nav a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 8px 16px;
+	transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo para el link activo navbar */
+  .nav a.active,.nav a:hover {
+	background-color: #c09cff;
+	color: #67097a;
+	border-radius: 4px;
+  }
+  
 
 h1 {
 		color: #8B51A5;
@@ -72,7 +103,7 @@ h1 {
 
 h2 {
 	background-image: linear-gradient(to right top, #bcb5f7, #c1baf5, #c6bff2, #cbc4f0, #cfc9ed, #d3ceed, #d8d4ee, #dcd9ee, #e1dff1, #e7e6f4, #ececf7, #f2f2fa);
-		color: #FFD700;
+		/*color: #FFD700;*/
 	width: 98%;
 	align-content: center;
 	text-align: center;
