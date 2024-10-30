@@ -25,7 +25,7 @@
 
 
 *{
-	margin: 2px;
+	/*margin: 2px;*/
 	
  
 }
@@ -87,15 +87,15 @@ nav {
   }
   
   .nav{
-	display: flex;
-	justify-content: center;
-	list-style: none;
+	display: flex !important;
+	justify-content: center !important;
+	list-style: none !important;
 	margin: 0;
 	padding: 0;
   }
   
   .nav li {
-	margin: 0 15px;
+	margin: 0 15px !important;
   }
   
   .nav a {
@@ -740,9 +740,9 @@ footer p {
   }
   
  
-  /* ANIMATIONS */
+  /* ANIMACIONES */
   
-  /* Simple CSS3 Fade-in-down Animation */
+  /* CSS3 Fade-in-down animacion */
   .fadeInDown {
 	-webkit-animation-name: fadeInDown;
 	animation-name: fadeInDown;
@@ -778,7 +778,7 @@ footer p {
 	}
   }
   
-  /* Simple CSS3 Fade-in Animation */
+  /* CSS3 Fade-in animacion */
   @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
   @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
