@@ -79,7 +79,6 @@ body{
 }
 
 
-<<<<<<< HEAD
 /*navbar*/
 /* Estilos básicos de navegación */
 nav {
@@ -87,7 +86,7 @@ nav {
 	padding: 10px 0;
   }
   
-  .navbar-main{
+  .nav{
 	display: flex;
 	justify-content: center;
 	list-style: none;
@@ -115,8 +114,6 @@ nav {
   }
   
 
-=======
->>>>>>> 1248523b0da5f8f0f71f3b672ee0bd87754d2f76
 h1 {
 		color: #8B51A5;
 		font-family: "Poppins", sans-serif;
@@ -124,14 +121,8 @@ h1 {
 
 h2 {
 	background-image: linear-gradient(to right top, #bcb5f7, #c1baf5, #c6bff2, #cbc4f0, #cfc9ed, #d3ceed, #d8d4ee, #dcd9ee, #e1dff1, #e7e6f4, #ececf7, #f2f2fa);
-<<<<<<< HEAD
 		/*color: #FFD700;*/
 	width: 98%;
-=======
-		color: #FFD700;
-	/*width: 98%;*/
-	width:auto;
->>>>>>> 1248523b0da5f8f0f71f3b672ee0bd87754d2f76
 	align-content: center;
 	text-align: center;
 	
