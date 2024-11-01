@@ -417,10 +417,12 @@ footer p {
 
 
 /*estilo caja de busqueda*/
-.search-container {
+.search-box {
     display: flex;
     justify-content: center;
-    padding: 15px;
+    flex-wrap: wrap; 
+    gap: 5px;
+	padding: 5px;
 }
 
 .search-form {
@@ -477,6 +479,19 @@ footer p {
     cursor: pointer;
 }
 
+.icons{
+	 color: #8817bd !important;
+}
+
+
+.icons i {
+    font-size: 24px; 
+    line-height: 1.5;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Estilo pagina en construccion*/
 
