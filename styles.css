@@ -493,6 +493,13 @@ footer p {
     justify-content: center;
 }
 
+.icons a {
+	color: #8817bd !important;
+    font-weight: 1000 !important;
+    
+}
+
+
 /* Estilo pagina en construccion*/
 
 .center-content-buildpage {
@@ -835,7 +842,7 @@ p {
 #back-to-top-full {
 	position: fixed;
 	bottom: 2%;
-	right: 7%;
+	right: 1%;
 	font-size:26px;
   
   }
