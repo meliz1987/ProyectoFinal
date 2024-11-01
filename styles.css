@@ -122,7 +122,7 @@ h1 {
 h2 {
 	background-image: linear-gradient(to right top, #bcb5f7, #c1baf5, #c6bff2, #cbc4f0, #cfc9ed, #d3ceed, #d8d4ee, #dcd9ee, #e1dff1, #e7e6f4, #ececf7, #f2f2fa);
 		/*color: #FFD700;*/
-	width: 98%;
+	width: 100%;
 	align-content: center;
 	text-align: center;
 	
@@ -132,7 +132,7 @@ h3 {
 	background-image: linear-gradient(to right top, #bcb5f7, #c1baf5, #c6bff2, #cbc4f0, #cfc9ed, #d3ceed, #d8d4ee, #dcd9ee, #e1dff1, #e7e6f4, #ececf7, #f2f2fa);
 		color: rgb(255, 0, 166);
 	/*width: 98%;*/
-	width:auto;
+	width:100%;
 	align-content: center;
 	text-align: center;
 }
