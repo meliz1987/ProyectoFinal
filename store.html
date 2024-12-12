@@ -28,19 +28,26 @@
 	 
  <!--banner de login- registro-->
  <div class="banner-landing">
-				 <div class="container-fluid d-flex align-items-center justify-content-between">
-			 <!-- Logo en navbar -->
-			 <a class="navbar-brand" href="/index.html">
-				 <img src="/images/logo_heart.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-			 </a>  
-			 <!-- Botones de register/login -->
-			 <div class="d-flex ms-auto">
-				<a href="/login.html" class="login-btn">Iniciar Sesión</a>
-				<a href="/register.html" class="register-btn">Registrarse</a>
-			 </div>
-		 </div>
- 
- </div>
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <!-- Logo en navbar -->
+        <a class="navbar-brand" href="/index.html">
+            <img src="/images/logo_heart.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        </a>  
+        <!-- Botones de register/login -->
+        <div class="d-flex ms-auto align-items-center">
+            <a href="/login.html" class="login-btn">Iniciar Sesión</a>
+            <a href="/register.html" class="register-btn">Registrarse</a>
+            <!--Carrito -->			
+            <a href="store.html"  id="cart-icon" class="cart-icon position-relative ms-3">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+			</a>	
+            </div>
+        </div>
+    </div>
+</div>
 				
 		 
  <header>
@@ -153,9 +160,7 @@
 						 
 				<section>
 <!--buscador de productos-->
-<div class="search-box" class=
-
-"buttons-card">
+<div class="search-box" class="buttons-card">
 	<form method="get" action="/search" class="search-form">
 			<input type="search" class="search-input" placeholder="Buscar por producto o categoría" aria-label="Search">
 			<button type="submit" class="send-btn">Buscar</button>
@@ -163,7 +168,7 @@
 </div>
 						</section>
 
-							<section>
+							<section id="mi-carrito">
 							
 							 <!--Productos-->
 		 <div class="product-container">
@@ -409,5 +414,7 @@
 	  <!-- Información del pie de página -->
 	  <p>Copyright &copy; 2024 Proyecto de Mariana Elizondo para Talento Tech. All rights reserved.</p>
   </footer>
+  <script src="script.js"></script>
+
 </body>
 </html>

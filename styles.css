@@ -310,6 +310,22 @@ padding: 0;
     border-radius: 5px;
   }
 
+  .cart-icon {
+    cursor: pointer;
+    color: #8860b6;
+}
+
+.cart-icon:hover {
+    color: #007bff; /* Cambia de color al pasar el cursor */
+}
+
+.cart-count {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    color: #fff;
+}
+
+
 .sitemap ul {
     list-style-type: none;
     padding-left: 0; 
@@ -932,4 +948,7 @@ p {
   
   }
 }
+
+
+
 
