@@ -28,25 +28,25 @@
 	 
  <!--banner de login- registro-->
  <div class="banner-landing">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-        <!-- Logo en navbar -->
-        <a class="navbar-brand" href="/index.html">
-            <img src="/images/logo_heart.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-        </a>  
-        <!-- Botones de register/login -->
-        <div class="d-flex ms-auto align-items-center">
-            <a href="/login.html" class="login-btn">Iniciar Sesión</a>
-            <a href="/register.html" class="register-btn">Registrarse</a>
-            <!--Carrito -->			
-            <a href="store.html"  id="cart-icon" class="cart-icon position-relative ms-3">
-                <i class="fa-solid fa-cart-shopping fa-lg"></i>
-                <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    0
-                </span>
+	<div class="container-fluid d-flex align-items-center justify-content-between">
+		<!-- Logo en navbar -->
+		<a class="navbar-brand" href="/index.html">
+			<img src="/images/logo_heart.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+		</a>  
+		<!-- Botones de register/login -->
+		<div class="d-flex ms-auto align-items-center">
+			<a href="/login.html" class="login-btn">Iniciar Sesión</a>
+			<a href="/register.html" class="register-btn">Registrarse</a>
+			<!--Carrito -->			
+			<a href="#"  id="cart-icon" class="cart-icon position-relative ms-3">
+				<i class="fa-solid fa-cart-shopping fa-lg"></i>
+				<span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+					0
+				</span>
 			</a>	
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </div>
 				
 		 
@@ -166,11 +166,20 @@
 			<button type="submit" class="send-btn">Buscar</button>
 	</form>
 </div>
-						</section>
+				</section>
+	
+	<!-- lista despleagble de carrito -->
+<div id="cart-list" class="cart-list">
+    <div class="cart-list-content">
+        <span class="close-btn">&times;</span>
+        <h2>Productos en tu carrito</h2>
+        <div id="cart-items-list"></div>
+        <button id="checkout-btn">Finalizar Compra</button>
+    </div>
+</div>
 
-							<section id="mi-carrito">
-							
-							 <!--Productos-->
+	<section id="mi-carrito">
+	 <!--Productos-->
 		 <div class="product-container">
 				<!-- bloque de productos -->
 				<div class="product">
@@ -183,10 +192,33 @@
 						<h4 class="price">$15.000</h4>
 				<p class="fees">6 cuotas sin interés</p>
 				<div class="buttons-card">
-				<button>Comprar</button>
-				<button>Agregar al carrito</button>
+				<!--<button>Comprar</button>-->
+				<!--<button>Agregar al carrito</button>-->
+				<!--<button class="add-to-cart" data-product-id="1" data-product-name="Llama Manta Apego" data-product-price="15000">Agregar al carrito</button>-->
+				<button class="buy-btn">Comprar</button>
 		</div>
+
+
+<!-- pop up agregar cant items -->
+<div id="purchase-modal" class="purchase-modal">
+    <div class="purchase-modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Selecciona la cantidad</h2>
+        <p><strong>Llama Manta Apego</strong></p>
+        <p><strong>Precio: $15.000</strong></p>
+        
+        <!-- Selección de cantidad -->
+        <label for="product-quantity">Cantidad:</label>
+        <input type="number" id="product-quantity" min="1" value="1">
+
+        <!-- Botón para agregar al carrito -->
+        <button id="add-to-cart-btn">Agregar al carrito</button>
+    </div>
+</div>
 				</div>
+
+
+
 		
 				<div class="product">
 					<div class= "icon-btn">

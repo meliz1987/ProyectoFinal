@@ -38,6 +38,13 @@
 		  <div class="d-flex ms-auto">
 			<a href="/login.html" class="login-btn">Iniciar Sesión</a>
 			<a href="/register.html" class="register-btn">Registrarse</a>
+			<!--Carrito -->			
+            <a href="#"  id="cart-icon" class="cart-icon position-relative ms-3">
+                <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+			</a>
 		  </div>
 		</div>
 	</div>
@@ -119,7 +126,18 @@
 	</form>
 </div>
 
-<section>
+
+	<!-- lista despleagble de carrito -->
+	<div id="cart-list" class="cart-list">
+		<div class="cart-list-content">
+			<span class="close-btn">&times;</span>
+			<h2>Productos en tu carrito</h2>
+			<div id="cart-items-list"></div>
+			<button id="checkout-btn">Finalizar Compra</button>
+		</div>
+	</div>
+
+<section id="mi-carrito">
 	 <!-- Productos -->
 <div class="product-container">
 	<!-- Bloque de productos -->
@@ -136,7 +154,8 @@
 		<p class="fees">6 cuotas sin interés de $2.500</p>
 		<div class="buttons-card">
 		<button>Comprar</button>
-		<button>Agregar al carrito</button>
+		<!--<button>Agregar al carrito</button>-->
+		<button class="add-to-cart" data-product-id="1" data-product-name="Llama Manta Apego" data-product-price="15000">Agregar al carrito</button>
 	</div>
 	</div>
 
@@ -151,7 +170,8 @@
 		<p class="fees">6 cuotas sin interés de $2.700</p>
 		<div class="buttons-card">
 		<button>Comprar</button>
-		<button>Agregar al carrito</button>
+		<!--<button>Agregar al carrito</button>-->
+		<button class="add-to-cart" data-product-id="2" data-product-name="Perro Pancho" data-product-price="16200">Agregar al carrito</button>
 		</div>
 	</div>
 
