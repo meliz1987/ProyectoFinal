@@ -40,6 +40,8 @@ document.querySelectorAll('.icon-btn').forEach(button => {
 
 
 
+//funcionalidad agregar al carrito
+
 const products = [
     {   id: 1,
         name:"Llama Manta Apego",
