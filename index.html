@@ -44,7 +44,7 @@
 			<!--Carrito -->			
             <a href="#"  id="cart-icon" class="cart-icon position-relative ms-3">
                 <i class="fa-solid fa-cart-shopping fa-lg"></i>
-                <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span id="cart-count" class="cart-counter position-absolute top-0 start-100 translate-middle badge rounded bg-danger">
                     0
                 </span>
 			</a>
@@ -135,18 +135,19 @@
 	</div>
 
 
-
-	<!-- lista despleagble de carrito -->
-	<div id="cart-list" class="cart-list">
+	<!-- lista despleagble de carrito 
+	<div id="cart-list" class="hidden">
 		<div class="cart-list-content">
-			<span class="close-btn">&times;</span>
+			<a href="#" span class="close-btn"><i class="fa-solid fa-xmark"></i></span> </a>
 			<h2>Productos en tu carrito</h2>
-			<div id="cart-items-list"></div>
+			<div id="cart-items-list">
+				<ul></ul>
+			</div>
 			<button id="checkout-btn">Finalizar Compra</button>
 		</div>
-	</div>
+	</div>-->
 
-<section id="mi-carrito">
+<section id="productContainerCart">
 	 <!-- Productos -->
 <div class="product-container">
 	<!-- Bloque de productos -->

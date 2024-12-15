@@ -281,7 +281,9 @@ padding: 0;
   }
 
 
-  .login-btn {
+  
+
+   #cancel-btn, .login-btn {
 	padding: 10px 20px;
 	font-size: 16px;
 	border: none;
@@ -293,6 +295,20 @@ padding: 0;
 	border: 1px solid #ccc !important;
     border-radius: 5px;
   }
+
+
+  #checkout-btn, #confirm-btn, #addToCart-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4a1c53;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ccc !important;
+      border-radius: 5px;
+    }
 
   .register-btn {
 	padding: 10px 20px;
@@ -307,57 +323,8 @@ padding: 0;
     border-radius: 5px;
   }
 
-  .cart-icon {
-    cursor: pointer;
-    color: #8860b6;
-}
+  
 
-.cart-icon:hover {
-    color: #19022e; /* Cambia de color al pasar el cursor */
-}
-
-
-
-
-/* Estilo del desplegable carrito */
-.cart-list {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.cart-list-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-.close-btn {
-    color: #241c25;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .sitemap ul {
     list-style-type: none;
@@ -508,68 +475,6 @@ footer p {
 }
 
 
-/* Estilo agregar cant items */
-.purchase-modal {
-    display: none; 
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: #19004766;
-    padding-top: 60px;
-}
-
-.purchase-modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-.close-btn {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Estilos para los campos de cantidad y el botón */
-input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    margin: 10px 0;
-}
-
-#add-to-cart-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#add-to-cart-btn:hover {
-    background-color: #45a049;
-}
-
-
 
 /*iconos*/
 
@@ -599,7 +504,7 @@ input[type="number"] {
 
 .icon-btn:hover{
   color: #e63946;
-  transform: scale(1.1); /* Agrandar el ícono en hover */
+  transform: scale(1.5); /* Agranda corazon */
 }
 .icon-btn.favorited {
   color: #e63946;
@@ -624,6 +529,17 @@ input[type="number"] {
     font-weight: 1000 !important;
     
 }
+
+/*icono carrito*/
+.cart-icon {
+  cursor: pointer;
+  color: #8860b6;
+}
+
+.cart-icon:hover {
+  color: #19022e; /* Cambia de color al pasar el cursor */
+}
+
 
 /*popup de agregado a favoritos */
 .popup {
@@ -653,6 +569,9 @@ input[type="number"] {
   opacity: 0; 
   transform: translateY(-20px); 
 }
+
+
+
 
 
 
@@ -974,6 +893,12 @@ p {
   
   }
 
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr); 
+    gap: 20px;
+    }
+
 }
 
 /*Small devices (landscape phones, 576px and up)*/
@@ -1023,6 +948,12 @@ p {
 .send-btn {
 	margin-top: 10px;
 }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat minmax(220px, 1fr); 
+  gap: 20px;
+  }
 }
 
 
@@ -1042,6 +973,13 @@ p {
 	font-size:26px;
   
   }
+
+
+   .reviews-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(250px, 1fr)); 
+	gap: 20px;
+  }
 }
 
 /*Large devices (desktops, 992px and up)*/
@@ -1057,6 +995,12 @@ p {
 	font-size:26px;
   
   }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+    gap: 20px;
+    }
 }
 
 /*X-Large devices (large desktops, 1200px and up)*/
