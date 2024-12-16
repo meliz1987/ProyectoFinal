@@ -95,49 +95,125 @@ const products = [
 
     
 
-    //for que cargara los productos de JSON en store.html
+//for que cargara los productos de JSON en store.html e index.html
+function renderProducts(products, containerId) {
     let productsHTML = "";
-    for (let index = 0; index < products.length; index ++){
+    for (let index = 0; index < products.length; index++) {
         productsHTML += `
-  <div class="product">
-					<div class= "icon-btn">
-						<i class="fa-regular fa-heart"></i>
-					</div>
-						<img src=${products[index].image} alt =${products[index].name}> 
-						<h5>${products[index].name}</h5>
-                        <p>${products[index].description}</p>
-						<h4 class="price">$ ${products[index].price}</h4>
-				<p class="fees">6 cuotas sin interés</p>
-				<div class="buttons-card">
-				<button class="buy-btn">Agregar al carrito</button>
-		</div>
-				</div>
- `;
-
+            <div class="product">
+                <div class="icon-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <img src="${products[index].image}" alt="${products[index].name}">
+                <h5>${products[index].name}</h5>
+                <p>${products[index].description}</p>
+                <h4 class="price">$${products[index].price}</h4>
+                <p class="fees">6 cuotas sin interés</p>
+                <div class="buttons-card">
+                    <button class="buy-btn">Agregar al carrito</button>
+                </div>
+            </div>
+        `;
     }
- 
-console.log (productsHTML);
 
- const productContainerCart = document.getElementById("productContainerCart");
- productContainerCart.innerHTML= productsHTML
+    const container = document.getElementById(containerId);
+    if (container) {
+        container.innerHTML = productsHTML;
+        // Asignar eventos a los boton agregar a favoritos después de renderizar
+        assignFavoriteEvents();
+    } else {
+        console.error(`Contenedor con id "${containerId}" no encontrado.`);
+    }
+}
 
 // Modulo favoritos -eventos a los botones de favoritos después de carga de productos
-document.querySelectorAll('.icon-btn').forEach(button => {
-    button.addEventListener('click', function () {
-        const heartIcon = this.querySelector('i');
+function assignFavoriteEvents() {
+    document.querySelectorAll('.icon-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const heartIcon = this.querySelector('i');
 
-        if (this.classList.contains('favorited')) {
-            this.classList.remove('favorited');
-            heartIcon.classList.remove('fa-solid'); 
-            heartIcon.classList.add('fa-regular'); 
-            showPopup('Eliminado de Favoritos');
+            if (this.classList.contains('favorited')) {
+                this.classList.remove('favorited');
+                heartIcon.classList.remove('fa-solid');
+                heartIcon.classList.add('fa-regular');
+                showPopup('Eliminado de Favoritos');
+            } else {
+                this.classList.add('favorited');
+                heartIcon.classList.remove('fa-regular');
+                heartIcon.classList.add('fa-solid');
+                showPopup('¡Agregado a Favoritos!');
+            }
+        });
+    });
+}
+
+// Función para obtener los últimos 4 productos solamente en index.html
+function getNewestProducts(products) {
+    return products
+        .sort((a, b) => b.id - a.id) // Ordenar por ID descendente
+        .slice(0, 4); // Tomar los primeros 4 productos
+}
+
+// Carga productos según la página -index.html tomara los ultmos 4 ids, store.html mostrará todos
+document.addEventListener("DOMContentLoaded", () => {
+    const productContainerCart = document.getElementById("productContainerCart");
+
+    if (productContainerCart) {
+        // Verificar n* de productos a cargar según la página
+        const isIndexPage = document.body.classList.contains("index-page");
+
+        if (isIndexPage) {
+            // Si estamos en index.html, renderizar solo los últimos 4 productos
+            const newestProducts = getNewestProducts(products);
+            renderProducts(newestProducts, "productContainerCart");
         } else {
-            this.classList.add('favorited');
-            heartIcon.classList.remove('fa-regular');
-            heartIcon.classList.add('fa-solid'); 
-            showPopup('¡Agregado a Favoritos!');
+            // Si estamos en store.html, renderizar todos los productos
+            renderProducts(products, "productContainerCart");
+        }
+    }
+});
+
+// Popup para notificacion de Agregado a Favoritos
+function showPopup(message) {
+    const popup = document.getElementById('favorite-popup');
+    if (popup) {
+        popup.textContent = message;
+        popup.classList.remove('hidden');
+        popup.classList.add('visible');
+
+        // Ocultar popup de notificacion después de 3 segundos
+        setTimeout(() => {
+            popup.classList.remove('visible');
+            popup.classList.add('hidden');
+        }, 3000);
+    }
+}
+
+
+// Función para buscar productos dentro de la página
+function searchProducts(event) {
+    event.preventDefault(); // Evitar que el formulario recargue la página
+
+    const searchInput = document.getElementById("searchInput").value.toLowerCase(); // Capturar el texto ingresado y convertirlo a minúsculas
+    const productCards = document.querySelectorAll(".product"); // Seleccionar todas las tarjetas de productos
+
+    productCards.forEach(card => {
+        const productName = card.querySelector("h5").textContent.toLowerCase(); // Nombre del producto
+        const productDescription = card.querySelector("p").textContent.toLowerCase(); // Descripción del producto
+
+        // Mostrar la tarjeta si coincide con la búsqueda; ocultarla si no
+        if (productName.includes(searchInput) || productDescription.includes(searchInput)) {
+            card.style.display = "block"; // Mostrar la tarjeta
+        } else {
+            card.style.display = "none"; // Ocultar la tarjeta
         }
     });
+}
+
+// Agregar el evento al formulario de búsqueda
+document.addEventListener("DOMContentLoaded", () => {
+    const searchForm = document.getElementById("searchForm");
+    searchForm.addEventListener("submit", searchProducts);
 });
 
 
