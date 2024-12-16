@@ -220,4 +220,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
  //***********************Modulo de carrito*******************************
 
- 
+ //agregar listener  a los botones de los porductos
+ //guarda variables en elementos HTML que serán modificados
+ const btnAddtoCart =document.querySelectorAll(".buy-btn");
+ console.log(btnAddtoCart);
+
+ const CartList = document.querySelector("#MyCart ul");
+ console.log(CartList);
+
+ const CartTotal = document.querySelector("#MyCart p");
+ console.log(CartTotal);
+
+ let totalToPay = 0;
+
+ //agregar listener a c/boton
+
+ for(let index = 0; index < btnAddtoCart.length; index++ ){
+    function addElemCart() { //definicion de la funcion
+    //console.log("click" + index) //chequeo de que la fucnion funciona
+
+    const elementLi = document.createElement("li");
+    
+        elementLi.innerHTML = ` producto ${products[index].name} $${products[index].price}`
+        console.log(elementLi) ;
+
+        CartList.appendChild(elementLi);
+
+        totalToPay +- products[index].price;
+        CartTotal.innerHTML = "Total a pagar : $ "+ totalToPay;
+    }
+
+   // console.log(btnAddtoCart[index])
+    btnAddtoCart[index].addEventListener("click ", addElemCart); //cuando se hace click, se nombra a la funcion addItemCart
+
+
+}
+
+
+//listener boton borrar
+const btnDelete = document.querySelector(".btn-del");
+console.log (btnDelete)//checkeo que funciona
+
+
+
