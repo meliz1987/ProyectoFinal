@@ -297,8 +297,8 @@ padding: 0;
   }
 
 
-  #checkout-btn, #confirm-btn, #addToCart-btn{
-    padding: 10px 20px;
+  .checkout-btn,#addToCart-btn{
+    padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 4px;
@@ -310,7 +310,7 @@ padding: 0;
       border-radius: 5px;
     }
 
-  .register-btn {
+  .register-btn, .cancel-btn {
 	padding: 10px 20px;
 	font-size: 16px;
 	border: none;
@@ -322,6 +322,19 @@ padding: 0;
 	border: 1px solid #ccc !important;
     border-radius: 5px;
   }
+
+  .del-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ee0034;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ccc !important;
+      border-radius: 5px;
+    }
 
   
 
@@ -707,7 +720,52 @@ footer p {
     padding: 10px;
 }
 
+/*sección Carrito*/
+/* Estilo general del pop-up (oculto por defecto) */
+.cart-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 405px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 25px;
+  display: none; 
+}
 
+.cart-popup.visible {
+  display: block; /* Mostrar cuando tenga la clase 'visible' */
+}
+
+.cart-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  bottom: 95%;
+  left: 100%;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#cart-total{
+  font-family: "Poppins", sans-serif;
+
+}
 
 /*sección reseñas*/
 

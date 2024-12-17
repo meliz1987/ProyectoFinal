@@ -90,12 +90,9 @@ const products = [
     }
     ];
 
-    //almacenamiento de carrito
-    let cart = [];
+//*********************** carga de productos desde el JSON*******************************
 
-    
-
-//for que cargara los productos de JSON en store.html e index.html
+// Función para renderizar productos en un contenedor específico
 function renderProducts(products, containerId) {
     let productsHTML = "";
     for (let index = 0; index < products.length; index++) {
@@ -110,7 +107,7 @@ function renderProducts(products, containerId) {
                 <h4 class="price">$${products[index].price}</h4>
                 <p class="fees">6 cuotas sin interés</p>
                 <div class="buttons-card">
-                    <button class="buy-btn">Agregar al carrito</button>
+                     <button class="buy-btn" data-id="${products[index].id}">Agregar al carrito</button>
                 </div>
             </div>
         `;
@@ -119,78 +116,54 @@ function renderProducts(products, containerId) {
     const container = document.getElementById(containerId);
     if (container) {
         container.innerHTML = productsHTML;
-        // Asignar eventos a los boton agregar a favoritos después de renderizar
-        assignFavoriteEvents();
+
+    // Asignar eventos a los botones de favoritos después de renderizar los productos
+document.querySelectorAll('.icon-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        const heartIcon = this.querySelector('i');
+
+        if (this.classList.contains('favorited')) {
+            this.classList.remove('favorited');
+            heartIcon.classList.remove('fa-solid'); 
+            heartIcon.classList.add('fa-regular'); 
+            showPopup('Eliminado de Favoritos');
+        } else {
+            this.classList.add('favorited');
+            heartIcon.classList.remove('fa-regular');
+            heartIcon.classList.add('fa-solid'); 
+            showPopup('¡Agregado a Favoritos!');
+        }
+    });
+});
+
+        // Asignar eventos a los botones "Agregar al carrito"
+        assignAddToCartEvents();
     } else {
         console.error(`Contenedor con id "${containerId}" no encontrado.`);
     }
 }
 
-// Modulo favoritos -eventos a los botones de favoritos después de carga de productos
-function assignFavoriteEvents() {
-    document.querySelectorAll('.icon-btn').forEach(button => {
-        button.addEventListener('click', function () {
-            const heartIcon = this.querySelector('i');
 
-            if (this.classList.contains('favorited')) {
-                this.classList.remove('favorited');
-                heartIcon.classList.remove('fa-solid');
-                heartIcon.classList.add('fa-regular');
-                showPopup('Eliminado de Favoritos');
-            } else {
-                this.classList.add('favorited');
-                heartIcon.classList.remove('fa-regular');
-                heartIcon.classList.add('fa-solid');
-                showPopup('¡Agregado a Favoritos!');
-            }
-        });
-    });
-}
 
-// Función para obtener los últimos 4 productos solamente en index.html
-function getNewestProducts(products) {
-    return products
-        .sort((a, b) => b.id - a.id) // Ordenar por ID descendente
-        .slice(0, 4); // Tomar los primeros 4 productos
-}
 
-// Carga productos según la página -index.html tomara los ultmos 4 ids, store.html mostrará todos
+//*********************** Inicialización  de visualizacion de ultimos productos -novedades*******************************
+
 document.addEventListener("DOMContentLoaded", () => {
     const productContainerCart = document.getElementById("productContainerCart");
 
     if (productContainerCart) {
-        // Verificar n* de productos a cargar según la página
         const isIndexPage = document.body.classList.contains("index-page");
 
         if (isIndexPage) {
-            // Si estamos en index.html, renderizar solo los últimos 4 productos
-            const newestProducts = getNewestProducts(products);
+            const newestProducts = products.slice(-4); // Últimos 4 productos
             renderProducts(newestProducts, "productContainerCart");
         } else {
-            // Si estamos en store.html, renderizar todos los productos
             renderProducts(products, "productContainerCart");
         }
     }
 });
 
-// Popup para notificacion de Agregado a Favoritos
-function showPopup(message) {
-    const popup = document.getElementById('favorite-popup');
-    if (popup) {
-        popup.textContent = message;
-        popup.classList.remove('hidden');
-        popup.classList.add('visible');
-
-        // Ocultar popup de notificacion después de 3 segundos
-        setTimeout(() => {
-            popup.classList.remove('visible');
-            popup.classList.add('hidden');
-        }, 3000);
-    }
-}
-
-
-// Función para buscar productos dentro de la página
+//*********************** Buscar productos dentro de la página *******************************
 function searchProducts(event) {
     event.preventDefault(); // Evitar que el formulario recargue la página
 
@@ -217,49 +190,113 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//*********************** Módulo del carrito *******************************
 
- //***********************Modulo de carrito*******************************
+// Variables globales
 
- //agregar listener  a los botones de los porductos
- //guarda variables en elementos HTML que serán modificados
- const btnAddtoCart =document.querySelectorAll(".buy-btn");
- console.log(btnAddtoCart);
+let totalToPay = 0; // Total acumulado
+let cartItems = []; // Array para almacenar los productos del carrito
 
- const CartList = document.querySelector("#MyCart ul");
- console.log(CartList);
-
- const CartTotal = document.querySelector("#MyCart p");
- console.log(CartTotal);
-
- let totalToPay = 0;
-
- //agregar listener a c/boton
-
- for(let index = 0; index < btnAddtoCart.length; index++ ){
-    function addElemCart() { //definicion de la funcion
-    //console.log("click" + index) //chequeo de que la fucnion funciona
-
-    const elementLi = document.createElement("li");
-    
-        elementLi.innerHTML = ` producto ${products[index].name} $${products[index].price}`
-        console.log(elementLi) ;
-
-        CartList.appendChild(elementLi);
-
-        totalToPay +- products[index].price;
-        CartTotal.innerHTML = "Total a pagar : $ "+ totalToPay;
-    }
-
-   // console.log(btnAddtoCart[index])
-    btnAddtoCart[index].addEventListener("click ", addElemCart); //cuando se hace click, se nombra a la funcion addItemCart
+// Referencias al DOM
+const CartList = document.querySelector("#cart-items-list");
+const CartTotal = document.querySelector("#cart-total");
+const CartCount = document.querySelector("#cart-count");
+const CartPopup = document.getElementById("cart-popup"); // El pop-up flotante
+const cartIcon = document.getElementById("cart-icon"); // Ícono del carrito
+const closeCartBtn = document.getElementById("close-cart-btn"); // Botón cerrar carrito
+const btnDelete = document.querySelector(".del-btn"); // Botón "Eliminar"
+const btnCancel = document.querySelector(".cancel-btn"); // Botón "Cancelar"
 
 
+// Funciones del carrito
+
+// Actualizar contador del carrito
+function updateCartCount() {
+    CartCount.textContent = cartItems.length;
 }
 
+// Mostrar el carrito como pop-up
+function showCartPopup() {
+    CartPopup.classList.add("visible");
+}
 
-//listener boton borrar
-const btnDelete = document.querySelector(".btn-del");
-console.log (btnDelete)//checkeo que funciona
+// Cerrar el carrito
+function closeCartPopup() {
+    CartPopup.classList.remove("visible");
+}
+
+// Agregar un producto al carrito
+function addElemCart(product) {
+    cartItems.push(product); // Añadir producto al array
+
+    // Crear un nuevo elemento <li> en el carrito
+    const elementLi = document.createElement("li");
+    elementLi.textContent = `Producto: ${product.name} - $${product.price}`;
+    CartList.appendChild(elementLi);
+
+    // Actualizar total y contador
+    totalToPay += product.price;
+    CartTotal.textContent = `Total a pagar: $${totalToPay}`;
+    updateCartCount();
+
+    // Abrir automáticamente el carrito como pop-up 
+    showCartPopup();
+}
+
+// Vaciar el carrito
+function clearCart() {
+    cartItems = []; // Vaciar el array
+    CartList.innerHTML = ""; // Limpiar la lista del DOM
+    totalToPay = 0; // Reiniciar total
+    CartTotal.textContent = "Total a pagar: $0";
+    updateCartCount();
+}
+
+// Función para cancelar: vacía el carrito y muestra mensaje
+function cancelCart() {
+    clearCart();
+    alert("Se canceló el carrito. Todos los productos fueron eliminados.");
+}
+
+// Asignar eventos a los botones "Eliminar" y "Cancelar"
+if (btnDelete) {
+    btnDelete.addEventListener("click", clearCart);
+}
+
+if (btnCancel) {
+    btnCancel.addEventListener("click", cancelCart);
+}
+
+// Asignar eventos a los botones "Agregar al carrito"
+function assignAddToCartEvents() {
+    const btnAddToCart = document.querySelectorAll(".buy-btn");
+    btnAddToCart.forEach((button) => {
+        button.addEventListener("click", () => {
+            const productId = parseInt(button.getAttribute("data-id"), 10); // Obtener el ID del producto
+            const product = products.find(p => p.id === productId); // Buscar el producto por ID
+            if (product) {
+                addElemCart(product); // Agregar el producto correcto al carrito
+            } else {
+                console.error("Producto no encontrado.");
+            }
+        });
+    });
+}
+
+//Eventos del pop-up 
+
+// Mostrar el carrito al hacer clic en el ícono
+cartIcon.addEventListener("click", showCartPopup);
+
+// Cerrar el carrito al hacer clic en la "X"
+closeCartBtn.addEventListener("click", closeCartPopup);
+
+// Cerrar el carrito haciendo clic fuera del pop-up
+window.addEventListener("click", (event) => {
+    if (event.target === CartPopup) {
+        closeCartPopup();
+    }
+});
 
 
 
