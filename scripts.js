@@ -94,7 +94,9 @@ const products = [
 
 // Función para renderizar productos en un contenedor específico
 function renderProducts(products, containerId) {
-    let productsHTML = "";
+    let productsHTML = `
+        <div class="product-container">
+    `;
     for (let index = 0; index < products.length; index++) {
         productsHTML += `
             <div class="product">
@@ -255,7 +257,7 @@ function clearCart() {
 // Función para cancelar: vacía el carrito y muestra mensaje
 function cancelCart() {
     clearCart();
-    alert("Se canceló el carrito. Todos los productos fueron eliminados.");
+    alert("Se cancelará el carrito. Todos los productos serán eliminados.");
 }
 
 // Asignar eventos a los botones "Eliminar" y "Cancelar"
