@@ -559,7 +559,7 @@ footer p {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #e63946; 
+  background-color: #08964f; 
   color: white; 
   padding: 10px 20px;
   border-radius: 8px;
@@ -665,7 +665,7 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 	position: relative;
-    box-shadow: 0 4px 8px #000000;
+    box-shadow: 0 4px 8px #4e0f50;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -714,7 +714,7 @@ footer p {
 }
 
 .product:hover {
-    box-shadow: 0 4px 8px #07010833; /*sombrerado al pasar el cursor */
+    box-shadow: 0 4px 8px #6c1c7a33; /*sombrerado al pasar el cursor */
 	transform: scale(1.0);
 	transition: transform 0.2s ease-in-out;
 }
